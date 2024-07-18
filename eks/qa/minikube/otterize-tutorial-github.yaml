@@ -1,0 +1,15 @@
+kind: ClientIntents
+apiVersion: k8s.otterize.com/v1alpha3
+metadata:
+  name: adventure
+  namespace: otterize-tutorial-github
+  creationTimestamp: null
+spec:
+  service:
+    name: adventure
+  calls:
+  - name: character-generator
+  - name: monster-generator
+  - name: monster-generator-v2
+  - name: quest-generator
+  - name: treasure-generator

@@ -1,0 +1,23 @@
+kind: ClientIntents
+apiVersion: k8s.otterize.com/v1alpha3
+metadata:
+  name: calico-kube-controllers
+  namespace: kube-system
+  creationTimestamp: null
+spec:
+  service:
+    name: calico-kube-controllers
+  calls:
+  - name: kubernetes.default
+---
+kind: ClientIntents
+apiVersion: k8s.otterize.com/v1alpha3
+metadata:
+  name: coredns
+  namespace: kube-system
+  creationTimestamp: null
+spec:
+  service:
+    name: coredns
+  calls:
+  - name: kubernetes.default
