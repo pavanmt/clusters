@@ -1,0 +1,35 @@
+kind: ClientIntents
+apiVersion: k8s.otterize.com/v1alpha3
+metadata:
+  name: credentials-operator-controller-manager
+  namespace: otterize-system
+  creationTimestamp: null
+spec:
+  service:
+    name: credentials-operator-controller-manager
+  calls:
+  - name: kubernetes.default
+---
+kind: ClientIntents
+apiVersion: k8s.otterize.com/v1alpha3
+metadata:
+  name: intents-operator
+  namespace: otterize-system
+  creationTimestamp: null
+spec:
+  service:
+    name: intents-operator
+  calls:
+  - name: kubernetes.default
+---
+kind: ClientIntents
+apiVersion: k8s.otterize.com/v1alpha3
+metadata:
+  name: otterize-network-mapper
+  namespace: otterize-system
+  creationTimestamp: null
+spec:
+  service:
+    name: otterize-network-mapper
+  calls:
+  - name: kubernetes.default

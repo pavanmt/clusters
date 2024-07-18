@@ -1,0 +1,23 @@
+kind: ClientIntents
+apiVersion: k8s.otterize.com/v1alpha3
+metadata:
+  name: client
+  namespace: otterize-tutorial-npol
+  creationTimestamp: null
+spec:
+  service:
+    name: client
+  calls:
+  - name: server
+---
+kind: ClientIntents
+apiVersion: k8s.otterize.com/v1alpha3
+metadata:
+  name: client-other
+  namespace: otterize-tutorial-npol
+  creationTimestamp: null
+spec:
+  service:
+    name: client-other
+  calls:
+  - name: server
