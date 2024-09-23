@@ -21,7 +21,7 @@ async def delete_flow_runs(flow_runs):
             await client.delete_flow_run(flow_run_id=flow_run.id)
 
 # Function to bulk delete flow runs based on their state
-async def bulk_delete_flow_runs(state: str = "Failed"):
+async def bulk_delete_flow_runs(state: str = "Completed"):
     flow_runs = await list_flow_runs_with_state(state)
 
     if len(flow_runs) == 0:
